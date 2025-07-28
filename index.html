@@ -5,19 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yafi Rizky - Data Scientist & Analyst</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3B82F6',
-            secondary: '#8B5CF6',
-            accent: '#06B6D4'
-          }
-        }
-      }
-    }
-  </script>
   <style>
     .gradient-bg {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -37,8 +24,8 @@
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
-    .skill-bar {
-      transition: width 2s ease-in-out;
+    .hidden-section {
+      display: none;
     }
   </style>
 </head>
@@ -47,21 +34,33 @@
   <nav class="bg-white/90 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
           Yafi Rizky
         </h1>
         <div class="hidden md:flex space-x-8">
-          <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
-          <a href="#about" class="text-gray-700 hover:text-primary transition-colors">Tentang</a>
-          <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Keahlian</a>
-          <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Proyek</a>
-          <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Kontak</a>
+          <a href="#home" class="text-gray-700 hover:text-blue-500 transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-500 transition-colors">Tentang</a>
+          <a href="#technical-skills" class="text-gray-700 hover:text-blue-500 transition-colors">Keahlian Teknis</a>
+          <a href="#focus-skills" class="text-gray-700 hover:text-blue-500 transition-colors">Fokus Keahlian</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-500 transition-colors">Proyek</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-500 transition-colors">Kontak</a>
         </div>
-        <button class="md:hidden p-2">
+        <button class="md:hidden p-2" onclick="toggleMobileMenu()">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden pt-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#home" class="text-gray-700 hover:text-blue-500 transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-500 transition-colors">Tentang</a>
+          <a href="#technical-skills" class="text-gray-700 hover:text-blue-500 transition-colors">Keahlian Teknis</a>
+          <a href="#focus-skills" class="text-gray-700 hover:text-blue-500 transition-colors">Fokus Keahlian</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-500 transition-colors">Proyek</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-500 transition-colors">Kontak</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -85,19 +84,12 @@
           Mengubah data menjadi insight yang bermakna untuk mendukung pengambilan keputusan bisnis yang lebih baik
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+          <a href="#projects" class="bg-white text-blue-500 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
             Lihat Proyek
           </a>
-          <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors">
+          <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-500 transition-colors">
             Hubungi Saya
           </a>
-          </div>
-        </div>
-        
-        <!-- Dots Indicator -->
-        <div class="flex justify-center mt-8 space-x-2">
-          <button class="w-3 h-3 rounded-full bg-primary" data-slide="0"></button>
-          <button class="w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
         </div>
       </div>
     </div>
@@ -122,20 +114,20 @@
           </p>
           <div class="space-y-4">
             <div class="flex items-center">
-              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
               <span>3+ tahun pengalaman dalam data analysis</span>
             </div>
             <div class="flex items-center">
-              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
               <span>Expertise dalam Python, R, dan SQL</span>
             </div>
             <div class="flex items-center">
-              <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
               <span>Specialized dalam machine learning dan predictive modeling</span>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl">
+        <div class="bg-gradient-to-br from-blue-500/10 to-purple-600/10 p-8 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6">Fokus Keahlian</h3>
           <div class="grid grid-cols-2 gap-4">
             <div class="text-center p-4 bg-white rounded-xl shadow-sm">
@@ -160,135 +152,175 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50">
+  <!-- Technical Skills Section -->
+  <section id="technical-skills" class="py-20 bg-gray-50 hidden-section">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Keahlian Teknis</h2>
         <p class="text-xl text-gray-600">Tools dan teknologi yang saya kuasai</p>
       </div>
-      <div class="max-w-4xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Programming Languages -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-bold mb-6 flex items-center">
-              <span class="text-3xl mr-4">💻</span>
-              Programming Languages
-            </h3>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="font-medium">Python</span>
-                <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Expert</span>
+      
+      <!-- Skill Categories -->
+      <div class="flex justify-center mb-8">
+        <div class="bg-gray-100 p-1 rounded-lg flex">
+          <button onclick="showSkillCategory('software')" class="px-6 py-2 rounded-md bg-blue-500 text-white">
+            Software
+          </button>
+          <button onclick="showSkillCategory('programming')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Programming
+          </button>
+          <button onclick="showSkillCategory('ml')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Machine Learning
+          </button>
+          <button onclick="showSkillCategory('dl')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Deep Learning
+          </button>
+        </div>
+      </div>
+      
+      <!-- Skill Content -->
+      <div id="software-content" class="skill-content">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Software yang Dikuasai</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">📊</span>
               </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">R</span>
-                <span class="px-3 py-1 bg-secondary text-white rounded-full text-sm">Advanced</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">SQL</span>
-                <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Expert</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">JavaScript</span>
-                <span class="px-3 py-1 bg-accent text-white rounded-full text-sm">Intermediate</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tools & Frameworks -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-bold mb-6 flex items-center">
-              <span class="text-3xl mr-4">🛠️</span>
-              Tools & Frameworks
-            </h3>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="font-medium">Pandas/NumPy</span>
-                <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Expert</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">Scikit-learn</span>
-                <span class="px-3 py-1 bg-secondary text-white rounded-full text-sm">Advanced</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">TensorFlow</span>
-                <span class="px-3 py-1 bg-accent text-white rounded-full text-sm">Intermediate</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium">Tableau</span>
-                <span class="px-3 py-1 bg-secondary text-white rounded-full text-sm">Advanced</span>
+              <div>
+                <h4 class="font-semibold">Tableau</h4>
+                <p class="text-gray-600">Advanced</p>
               </div>
             </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🔍</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Power BI</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
+            <!-- Tambahkan software lainnya -->
           </div>
         </div>
       </div>
+      
+      <div id="programming-content" class="skill-content hidden">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Bahasa Pemrograman</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🐍</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Python</h4>
+                <p class="text-gray-600">Expert</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">ℹ️</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">R</h4>
+                <p class="text-gray-600">Advanced</p>
+              </div>
+            </div>
+            <!-- Tambahkan bahasa pemrograman lainnya -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tambahkan konten untuk kategori lainnya -->
     </div>
   </section>
 
- <!-- Projects Section -->
-<section id="projects" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <!-- Header dan toggle view -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4">Projects</h2>
-      <p class="text-xl text-gray-600">Kumpulan proyek data science yang telah saya kerjakan</p>
-    </div>
-    
-    <!-- View Toggle -->
-    <div class="flex justify-center mb-8">
-      <div class="bg-gray-100 p-1 rounded-lg flex">
-        <button onclick="switchView('grid')" id="gridBtn" class="px-6 py-2 rounded-md bg-primary text-white">
-          Grid View
-        </button>
-        <button onclick="switchView('list')" id="listBtn" class="px-6 py-2 rounded-md text-gray-600">
-          List View
-        </button>
+  <!-- Focus Skills Section -->
+  <section id="focus-skills" class="py-20 bg-white hidden-section">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Fokus Keahlian</h2>
+        <p class="text-xl text-gray-600">Area keahlian utama saya</p>
       </div>
-    </div>
-
-    <!-- Grid View -->
-    <div id="gridView">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="gridContainer">
-        <!-- Projects akan diisi oleh JavaScript -->
-      </div>
-    </div>
-
-    <!-- List View -->
-    <div id="listView" class="hidden">
-      <div class="space-y-6" id="listContainer">
-        <!-- Projects akan diisi oleh JavaScript -->
-      </div>
-      <!-- Pagination -->
-      <div class="mt-8 flex justify-center">
-        <div class="flex items-center space-x-2" id="pagination">
-          <!-- Pagination akan diisi oleh JavaScript -->
+      
+      <!-- Skill Categories -->
+      <div class="flex justify-center mb-8">
+        <div class="bg-gray-100 p-1 rounded-lg flex">
+          <button onclick="showFocusCategory('data-analysis')" class="px-6 py-2 rounded-md bg-blue-500 text-white">
+            Data Analysis
+          </button>
+          <button onclick="showFocusCategory('data-viz')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Data Visualization
+          </button>
+          <button onclick="showFocusCategory('bi')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Business Intelligence
+          </button>
+          <button onclick="showFocusCategory('web-dev')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+            Web Development
+          </button>
         </div>
       </div>
+      
+      <!-- Focus Content -->
+      <div id="data-analysis-content" class="focus-content">
+        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Data Analysis</h3>
+          <p class="text-gray-600 mb-6">
+            Keahlian dalam menganalisis data untuk menemukan pola, tren, dan insight yang berguna untuk pengambilan keputusan bisnis.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+              <span>Data cleaning dan preprocessing</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+              <span>Exploratory Data Analysis (EDA)</span>
+            </div>
+            <!-- Tambahkan skill lainnya -->
+          </div>
+        </div>
+      </div>
+      
+      <div id="data-viz-content" class="focus-content hidden">
+        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Data Visualization</h3>
+          <p class="text-gray-600 mb-6">
+            Keahlian dalam menampilkan data secara visual untuk memudahkan pemahaman dan pengambilan keputusan.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+              <span>Visualisasi interaktif dengan Tableau</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+              <span>Visualisasi dengan Python (Matplotlib, Seaborn)</span>
+            </div>
+            <!-- Tambahkan skill lainnya -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tambahkan konten untuk kategori lainnya -->
     </div>
-  </div>
-</section>
+  </section>
 
-<script src="projects.js"></script>
-      <!-- Grid View -->
-      <div id="gridView" class="relative">
-        <!-- Navigation Arrows -->
-        <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-xl transition-all duration-300 opacity-50 hover:opacity-100">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </button>
-        <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-xl transition-all duration-300 opacity-50 hover:opacity-100">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </button>
-        
-        <!-- Projects Container -->
-        <div class="overflow-hidden">
-          <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-transform duration-500">
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Projects</h2>
+        <p class="text-xl text-gray-600">Kumpulan proyek data science yang telah saya kerjakan</p>
+      </div>
+      
+      <!-- Projects in 3x1 Grid -->
+      <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
         <!-- Project 1 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-          <div class="bg-gradient-to-r from-primary to-secondary p-6">
+          <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-6">
             <div class="text-white text-3xl mb-4">📈</div>
             <h3 class="text-xl font-bold text-white">Sales Forecasting Model</h3>
             <div class="text-white/80 text-sm mt-2">Januari 2024 - Maret 2024</div>
@@ -298,33 +330,21 @@
               Model prediksi penjualan menggunakan machine learning untuk membantu perencanaan inventory dan strategi bisnis.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-              <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Scikit-learn</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Pandas</span>
+              <span class="px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-purple-600/10 text-purple-600 rounded-full text-sm">Scikit-learn</span>
+              <span class="px-3 py-1 bg-cyan-500/10 text-cyan-500 rounded-full text-sm">Pandas</span>
             </div>
             <div class="flex justify-between items-center">
-              <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+              <a href="#" class="text-blue-500 hover:text-blue-500/80 font-semibold">
                 Lihat Detail →
               </a>
-              <div class="flex space-x-2">
-                <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                  </svg>
-                </button>
-                <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </div>
-
+        
         <!-- Project 2 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-          <div class="bg-gradient-to-r from-secondary to-accent p-6">
+          <div class="bg-gradient-to-r from-purple-600 to-cyan-500 p-6">
             <div class="text-white text-3xl mb-4">🔍</div>
             <h3 class="text-xl font-bold text-white">Customer Segmentation Analysis</h3>
             <div class="flex items-center text-white/80 text-sm mt-2">
@@ -337,33 +357,21 @@
               Analisis segmentasi pelanggan menggunakan clustering algorithm untuk personalisasi marketing strategy.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-              <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">K-Means</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Tableau</span>
+              <span class="px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-purple-600/10 text-purple-600 rounded-full text-sm">K-Means</span>
+              <span class="px-3 py-1 bg-cyan-500/10 text-cyan-500 rounded-full text-sm">Tableau</span>
             </div>
             <div class="flex justify-between items-center">
-              <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+              <a href="#" class="text-blue-500 hover:text-blue-500/80 font-semibold">
                 Lihat Detail →
               </a>
-              <div class="flex space-x-2">
-                <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                  </svg>
-                </button>
-                <button class="p-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed" title="Analysis in Progress" disabled>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </div>
-
+        
         <!-- Project 3 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-          <div class="bg-gradient-to-r from-accent to-primary p-6">
+          <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-6">
             <div class="text-white text-3xl mb-4">💹</div>
             <h3 class="text-xl font-bold text-white">Financial Risk Assessment</h3>
             <div class="text-white/80 text-sm mt-2">Oktober 2023 - Desember 2023</div>
@@ -373,334 +381,23 @@
               Model assessment risiko kredit menggunakan ensemble methods untuk meminimalkan default rate.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">R</span>
-              <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Random Forest</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">SQL</span>
+              <span class="px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full text-sm">R</span>
+              <span class="px-3 py-1 bg-purple-600/10 text-purple-600 rounded-full text-sm">Random Forest</span>
+              <span class="px-3 py-1 bg-cyan-500/10 text-cyan-500 rounded-full text-sm">SQL</span>
             </div>
             <div class="flex justify-between items-center">
-              <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+              <a href="#" class="text-blue-500 hover:text-blue-500/80 font-semibold">
                 Lihat Detail →
               </a>
-              <div class="flex space-x-2">
-                <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                  </svg>
-                </button>
-                <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- List View -->
-      <div id="listView" class="hidden space-y-6">
-        <!-- Project 1 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">📈</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">01</span>
-                  <h3 class="text-xl font-bold">Sales Forecasting Model</h3>
-                  <span class="text-sm text-gray-500">Januari 2024 - Maret 2024</span>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Model prediksi penjualan menggunakan machine learning untuk membantu perencanaan inventory dan strategi bisnis. Menerapkan algoritma time series dan regression untuk akurasi prediksi yang optimal.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Scikit-learn</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Pandas</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed" title="Analysis in Progress" disabled>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">💹</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">03</span>
-                  <h3 class="text-xl font-bold">Financial Risk Assessment</h3>
-                  <span class="text-sm text-gray-500">Oktober 2023 - Desember 2023</span>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Model assessment risiko kredit menggunakan ensemble methods untuk meminimalkan default rate. Implementasi advanced feature engineering dan model validation untuk tingkat akurasi tinggi.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">R</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Random Forest</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">SQL</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">🏥</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">04</span>
-                  <h3 class="text-xl font-bold">Healthcare Data Analytics</h3>
-                  <span class="text-sm text-gray-500">Juni 2023 - Agustus 2023</span>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Analisis data kesehatan untuk prediksi risiko penyakit dan optimasi treatment plan. Menggunakan deep learning untuk pattern recognition pada medical imaging data.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">TensorFlow</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">OpenCV</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">🌐</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">05</span>
-                  <h3 class="text-xl font-bold">Social Media Analytics</h3>
-                  <span class="text-sm text-gray-500">Maret 2023 - Mei 2023</span>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Analisis sentiment dan trend pada platform media sosial untuk brand monitoring dan market intelligence. Natural Language Processing untuk ekstraksi insights dari unstructured data.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">NLTK</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">MongoDB</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">🚗</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">06</span>
-                  <h3 class="text-xl font-bold">IoT Data Processing</h3>
-                  <div class="flex items-center">
-                    <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-green-600 font-semibold text-sm">On-Going Project</span>
-                  </div>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Real-time processing dan analytics untuk IoT sensor data dalam smart city applications. Implementasi streaming analytics untuk monitoring traffic patterns dan environmental conditions.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Apache Kafka</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Docker</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed" title="Analysis in Progress" disabled>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination for List View -->
-      <div id="listPagination" class="hidden mt-8 flex justify-center">
-        <div class="flex items-center space-x-2">
-          <button class="px-3 py-2 text-gray-500 hover:text-primary disabled:opacity-50" disabled>
-            ← Previous
-          </button>
-          <button class="px-3 py-2 bg-primary text-white rounded">1</button>
-          <button class="px-3 py-2 text-gray-600 hover:text-primary">2</button>
-          <button class="px-3 py-2 text-gray-600 hover:text-primary">
-            Next →
-          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    function switchView(view) {
-      const gridView = document.getElementById('gridView');
-      const listView = document.getElementById('listView');
-      const listPagination = document.getElementById('listPagination');
-      const gridBtn = document.getElementById('gridBtn');
-      const listBtn = document.getElementById('listBtn');
-
-      if (view === 'grid') {
-        gridView.classList.remove('hidden');
-        listView.classList.add('hidden');
-        listPagination.classList.add('hidden');
-        gridBtn.classList.add('bg-primary', 'text-white');
-        gridBtn.classList.remove('text-gray-600');
-        listBtn.classList.remove('bg-primary', 'text-white');
-        listBtn.classList.add('text-gray-600');
-      } else {
-        gridView.classList.add('hidden');
-        listView.classList.remove('hidden');
-        listPagination.classList.remove('hidden');
-        listBtn.classList.add('bg-primary', 'text-white');
-        listBtn.classList.remove('text-gray-600');
-        gridBtn.classList.remove('bg-primary', 'text-white');
-        gridBtn.classList.add('text-gray-600');
-      }
-    }
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-  </script>-2 bg-gray-100 hover:bg-primary hover:text-white rounded-lg transition-colors" title="Download Raw Dataset">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </button>
-              <button class="p-2 bg-gray-100 hover:bg-secondary hover:text-white rounded-lg transition-colors" title="Download Analysis Result">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a4 4 0 01-4-4V5a4 4 0 014-4h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a4 4 0 01-4 4z"></path>
-                </svg>
-              </button>
-              <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
-          <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-4">
-              <div class="text-4xl">🔍</div>
-              <div class="flex-1">
-                <div class="flex items-center space-x-3 mb-2">
-                  <span class="text-sm font-medium text-gray-500">02</span>
-                  <h3 class="text-xl font-bold">Customer Segmentation Analysis</h3>
-                  <div class="flex items-center">
-                    <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-green-600 font-semibold text-sm">On-Going Project</span>
-                  </div>
-                </div>
-                <p class="text-gray-600 mb-3">
-                  Analisis segmentasi pelanggan menggunakan clustering algorithm untuk personalisasi marketing strategy. Mengidentifikasi pola pembelian dan preferensi konsumen untuk optimasi targeting.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
-                  <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">K-Means</span>
-                  <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Tableau</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <button class="p
-
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-50">
+  <section id="contact" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Mari Berkolaborasi</h2>
@@ -712,8 +409,8 @@
             <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
             <div class="space-y-4">
               <div class="flex items-center">
-                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
@@ -723,8 +420,8 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </div>
@@ -734,8 +431,8 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 </div>
@@ -746,21 +443,21 @@
               </div>
             </div>
           </div>
-          <div class="bg-white p-8 rounded-xl shadow-sm">
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
             <form class="space-y-6">
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
-                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               </div>
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               </div>
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
-                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
               </div>
-              <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-semibold">
+              <button type="submit" class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-500/90 transition-colors font-semibold">
                 Kirim Pesan
               </button>
             </form>
@@ -775,19 +472,19 @@
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             Yafi Rizky
           </h3>
           <p class="text-gray-400 mb-4">
             Data Scientist & Analyst yang passionate dalam mengubah data menjadi actionable insights.
           </p>
           <div class="flex space-x-4">
-            <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors">
+            <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
             </a>
-            <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors">
+            <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
@@ -796,4 +493,121 @@
         </div>
         <div>
           <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-          <div class="space
+          <div class="space-y-2">
+            <a href="#home" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+            <a href="#about" class="block text-gray-400 hover:text-white transition-colors">Tentang</a>
+            <a href="#technical-skills" class="block text-gray-400 hover:text-white transition-colors">Keahlian Teknis</a>
+            <a href="#projects" class="block text-gray-400 hover:text-white transition-colors">Proyek</a>
+            <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Kontak</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+          <div class="space-y-2">
+            <p class="text-gray-400">yafi.rizky@email.com</p>
+            <p class="text-gray-400">linkedin.com/in/yafirizky</p>
+            <p class="text-gray-400">github.com/yafirizky</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2024 Yafi Rizky. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      // Hide mobile menu after clicking a link
+      if (!this.getAttribute('href').startsWith('#')) {
+        document.getElementById('mobileMenu').classList.add('hidden');
+      }
+      
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Show/hide sections based on hash
+function handleHashChange() {
+  const sections = ['about', 'technical-skills', 'focus-skills', 'projects', 'contact'];
+  const hash = window.location.hash.substring(1);
+  
+  sections.forEach(section => {
+    const element = document.getElementById(section);
+    if (element) {
+      if (section === hash || (hash === '' && section === 'about')) {
+        element.classList.remove('hidden-section');
+      } else {
+        element.classList.add('hidden-section');
+      }
+    }
+  });
+}
+
+// Show skill category
+function showSkillCategory(category) {
+  // Update active button
+  document.querySelectorAll('#technical-skills .bg-gray-100 button').forEach(btn => {
+    if (btn.textContent.toLowerCase().includes(category)) {
+      btn.classList.add('bg-blue-500', 'text-white');
+      btn.classList.remove('text-gray-600', 'hover:text-blue-500');
+    } else {
+      btn.classList.remove('bg-blue-500', 'text-white');
+      btn.classList.add('text-gray-600', 'hover:text-blue-500');
+    }
+  });
+
+  // Show selected content
+  document.querySelectorAll('.skill-content').forEach(content => {
+    if (content.id === `${category}-content`) {
+      content.classList.remove('hidden');
+    } else {
+      content.classList.add('hidden');
+    }
+  });
+}
+
+// Show focus category
+function showFocusCategory(category) {
+  // Update active button
+  document.querySelectorAll('#focus-skills .bg-gray-100 button').forEach(btn => {
+    if (btn.textContent.toLowerCase().includes(category)) {
+      btn.classList.add('bg-blue-500', 'text-white');
+      btn.classList.remove('text-gray-600', 'hover:text-blue-500');
+    } else {
+      btn.classList.remove('bg-blue-500', 'text-white');
+      btn.classList.add('text-gray-600', 'hover:text-blue-500');
+    }
+  });
+
+  // Show selected content
+  document.querySelectorAll('.focus-content').forEach(content => {
+    if (content.id === `${category}-content`) {
+      content.classList.remove('hidden');
+    } else {
+      content.classList.add('hidden');
+    }
+  });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  handleHashChange();
+  
+  // Set default views
+  showSkillCategory('software');
+  showFocusCategory('data-analysis');
+});
+
+// Handle hash changes
+window.addEventListener('hashchange', handleHashChange);
