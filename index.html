@@ -27,6 +27,13 @@
     .hidden-section {
       display: none;
     }
+    .skill-item {
+      transition: all 0.3s ease;
+    }
+    .skill-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -153,7 +160,7 @@
   </section>
 
   <!-- Technical Skills Section -->
-  <section id="technical-skills" class="py-20 bg-gray-50 hidden-section">
+  <section id="technical-skills" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Keahlian Teknis</h2>
@@ -162,17 +169,17 @@
       
       <!-- Skill Categories -->
       <div class="flex justify-center mb-8">
-        <div class="bg-gray-100 p-1 rounded-lg flex">
-          <button onclick="showSkillCategory('software')" class="px-6 py-2 rounded-md bg-blue-500 text-white">
+        <div class="bg-gray-100 p-1 rounded-lg flex overflow-x-auto">
+          <button onclick="showSkillCategory('software')" class="px-6 py-2 rounded-md bg-blue-500 text-white whitespace-nowrap">
             Software
           </button>
-          <button onclick="showSkillCategory('programming')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+          <button onclick="showSkillCategory('programming')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500 whitespace-nowrap">
             Programming
           </button>
-          <button onclick="showSkillCategory('ml')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+          <button onclick="showSkillCategory('ml')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500 whitespace-nowrap">
             Machine Learning
           </button>
-          <button onclick="showSkillCategory('dl')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
+          <button onclick="showSkillCategory('dl')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500 whitespace-nowrap">
             Deep Learning
           </button>
         </div>
@@ -201,7 +208,24 @@
                 <p class="text-gray-600">Intermediate</p>
               </div>
             </div>
-            <!-- Tambahkan software lainnya -->
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">📝</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Excel</h4>
+                <p class="text-gray-600">Advanced</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🛠️</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Jupyter Notebook</h4>
+                <p class="text-gray-600">Expert</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -228,83 +252,177 @@
                 <p class="text-gray-600">Advanced</p>
               </div>
             </div>
-            <!-- Tambahkan bahasa pemrograman lainnya -->
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🗃️</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">SQL</h4>
+                <p class="text-gray-600">Expert</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🟨</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">JavaScript</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
-      <!-- Tambahkan konten untuk kategori lainnya -->
+      <div id="ml-content" class="skill-content hidden">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Machine Learning</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🧠</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Scikit-learn</h4>
+                <p class="text-gray-600">Advanced</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">📦</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Pandas/Numpy</h4>
+                <p class="text-gray-600">Expert</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">📊</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">Statsmodels</h4>
+                <p class="text-gray-600">Advanced</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🔍</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">XGBoost</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="dl-content" class="skill-content hidden">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">Deep Learning</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🧠</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">TensorFlow</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">🟦</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">PyTorch</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">👁️</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">OpenCV</h4>
+                <p class="text-gray-600">Basic</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-500">💬</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">NLTK</h4>
+                <p class="text-gray-600">Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Focus Skills Section -->
-  <section id="focus-skills" class="py-20 bg-white hidden-section">
+  <section id="focus-skills" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Fokus Keahlian</h2>
         <p class="text-xl text-gray-600">Area keahlian utama saya</p>
       </div>
-      
-      <!-- Skill Categories -->
-      <div class="flex justify-center mb-8">
-        <div class="bg-gray-100 p-1 rounded-lg flex">
-          <button onclick="showFocusCategory('data-analysis')" class="px-6 py-2 rounded-md bg-blue-500 text-white">
-            Data Analysis
-          </button>
-          <button onclick="showFocusCategory('data-viz')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
-            Data Visualization
-          </button>
-          <button onclick="showFocusCategory('bi')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
-            Business Intelligence
-          </button>
-          <button onclick="showFocusCategory('web-dev')" class="px-6 py-2 rounded-md text-gray-600 hover:text-blue-500">
-            Web Development
-          </button>
-        </div>
-      </div>
-      
-      <!-- Focus Content -->
-      <div id="data-analysis-content" class="focus-content">
-        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
-          <h3 class="text-2xl font-bold mb-6">Data Analysis</h3>
-          <p class="text-gray-600 mb-6">
-            Keahlian dalam menganalisis data untuk menemukan pola, tren, dan insight yang berguna untuk pengambilan keputusan bisnis.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-              <span>Data cleaning dan preprocessing</span>
+
+      <!-- Slider Container -->
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Slider Navigation -->
+        <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-blue-500 hover:shadow-xl transition-all duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-blue-500 hover:shadow-xl transition-all duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <!-- Skills Slides -->
+        <div class="overflow-hidden">
+          <div id="skillsSlider" class="flex transition-transform duration-500">
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="grid grid-cols-2 gap-6">
+                <div onclick="showSkillDetail('data-analysis')" class="bg-gray-50 p-8 rounded-xl shadow-sm text-center cursor-pointer hover:shadow-md transition-all skill-item">
+                  <div class="text-4xl mb-4">📊</div>
+                  <h3 class="text-xl font-bold">Data Analysis</h3>
+                  <p class="text-gray-500 mt-2 text-sm">Klik untuk detail</p>
+                </div>
+                <div onclick="showSkillDetail('machine-learning')" class="bg-gray-50 p-8 rounded-xl shadow-sm text-center cursor-pointer hover:shadow-md transition-all skill-item">
+                  <div class="text-4xl mb-4">🤖</div>
+                  <h3 class="text-xl font-bold">Machine Learning</h3>
+                  <p class="text-gray-500 mt-2 text-sm">Klik untuk detail</p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-              <span>Exploratory Data Analysis (EDA)</span>
+            
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="grid grid-cols-2 gap-6">
+                <div onclick="showSkillDetail('data-viz')" class="bg-gray-50 p-8 rounded-xl shadow-sm text-center cursor-pointer hover:shadow-md transition-all skill-item">
+                  <div class="text-4xl mb-4">📈</div>
+                  <h3 class="text-xl font-bold">Data Visualization</h3>
+                  <p class="text-gray-500 mt-2 text-sm">Klik untuk detail</p>
+                </div>
+                <div onclick="showSkillDetail('business-intel')" class="bg-gray-50 p-8 rounded-xl shadow-sm text-center cursor-pointer hover:shadow-md transition-all skill-item">
+                  <div class="text-4xl mb-4">💡</div>
+                  <h3 class="text-xl font-bold">Business Intelligence</h3>
+                  <p class="text-gray-500 mt-2 text-sm">Klik untuk detail</p>
+                </div>
+              </div>
             </div>
-            <!-- Tambahkan skill lainnya -->
           </div>
         </div>
       </div>
-      
-      <div id="data-viz-content" class="focus-content hidden">
-        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
-          <h3 class="text-2xl font-bold mb-6">Data Visualization</h3>
-          <p class="text-gray-600 mb-6">
-            Keahlian dalam menampilkan data secara visual untuk memudahkan pemahaman dan pengambilan keputusan.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-              <span>Visualisasi interaktif dengan Tableau</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-              <span>Visualisasi dengan Python (Matplotlib, Seaborn)</span>
-            </div>
-            <!-- Tambahkan skill lainnya -->
-          </div>
-        </div>
-      </div>
-      
-      <!-- Tambahkan konten untuk kategori lainnya -->
     </div>
   </section>
 
@@ -453,161 +571,18 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
                 <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
-                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-              </div>
-              <button type="submit" class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-500/90 transition-colors font-semibold">
-                Kirim Pesan
-              </button>
-            </form>
-          </div>
-        </div>
+            <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+        <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
       </div>
-    </div>
-  </section>
+    <button type="submit" class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors font-semibold">Kirim Pesan</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Yafi Rizky
-          </h3>
-          <p class="text-gray-400 mb-4">
-            Data Scientist & Analyst yang passionate dalam mengubah data menjadi actionable insights.
-          </p>
-          <div class="flex space-x-4">
-            <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-          <div class="space-y-2">
-            <a href="#home" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-            <a href="#about" class="block text-gray-400 hover:text-white transition-colors">Tentang</a>
-            <a href="#technical-skills" class="block text-gray-400 hover:text-white transition-colors">Keahlian Teknis</a>
-            <a href="#projects" class="block text-gray-400 hover:text-white transition-colors">Proyek</a>
-            <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Kontak</a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Kontak</h4>
-          <div class="space-y-2">
-            <p class="text-gray-400">yafi.rizky@email.com</p>
-            <p class="text-gray-400">linkedin.com/in/yafirizky</p>
-            <p class="text-gray-400">github.com/yafirizky</p>
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>© 2024 Yafi Rizky. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      // Hide mobile menu after clicking a link
-      if (!this.getAttribute('href').startsWith('#')) {
-        document.getElementById('mobileMenu').classList.add('hidden');
-      }
-      
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Show/hide sections based on hash
-function handleHashChange() {
-  const sections = ['about', 'technical-skills', 'focus-skills', 'projects', 'contact'];
-  const hash = window.location.hash.substring(1);
-  
-  sections.forEach(section => {
-    const element = document.getElementById(section);
-    if (element) {
-      if (section === hash || (hash === '' && section === 'about')) {
-        element.classList.remove('hidden-section');
-      } else {
-        element.classList.add('hidden-section');
-      }
-    }
-  });
-}
-
-// Show skill category
-function showSkillCategory(category) {
-  // Update active button
-  document.querySelectorAll('#technical-skills .bg-gray-100 button').forEach(btn => {
-    if (btn.textContent.toLowerCase().includes(category)) {
-      btn.classList.add('bg-blue-500', 'text-white');
-      btn.classList.remove('text-gray-600', 'hover:text-blue-500');
-    } else {
-      btn.classList.remove('bg-blue-500', 'text-white');
-      btn.classList.add('text-gray-600', 'hover:text-blue-500');
-    }
-  });
-
-  // Show selected content
-  document.querySelectorAll('.skill-content').forEach(content => {
-    if (content.id === `${category}-content`) {
-      content.classList.remove('hidden');
-    } else {
-      content.classList.add('hidden');
-    }
-  });
-}
-
-// Show focus category
-function showFocusCategory(category) {
-  // Update active button
-  document.querySelectorAll('#focus-skills .bg-gray-100 button').forEach(btn => {
-    if (btn.textContent.toLowerCase().includes(category)) {
-      btn.classList.add('bg-blue-500', 'text-white');
-      btn.classList.remove('text-gray-600', 'hover:text-blue-500');
-    } else {
-      btn.classList.remove('bg-blue-500', 'text-white');
-      btn.classList.add('text-gray-600', 'hover:text-blue-500');
-    }
-  });
-
-  // Show selected content
-  document.querySelectorAll('.focus-content').forEach(content => {
-    if (content.id === `${category}-content`) {
-      content.classList.remove('hidden');
-    } else {
-      content.classList.add('hidden');
-    }
-  });
-}
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-  handleHashChange();
-  
-  // Set default views
-  showSkillCategory('software');
-  showFocusCategory('data-analysis');
-});
-
-// Handle hash changes
-window.addEventListener('hashchange', handleHashChange);
+</section> <!-- Footer --> <footer class="bg-gray-900 text-white py-12"> <div class="container mx-auto px-6"> <div class="grid md:grid-cols-3 gap-8"> <div> <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"> Yafi Rizky </h3> <p class="text-gray-400 mb-4"> Data Scientist & Analyst yang passionate dalam mengubah data menjadi actionable insights. </p> <div class="flex space-x-4"> <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/> </svg> </a> <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/> </svg> </a> </div> </div> <div> <h4 class="text-lg font-semibold mb-4">Quick Links</h4> <div class="space-y-2"> <a href="#home" class="block text-gray-400 hover:text-white transition-colors">Home</a> <a href="#about" class="block text-gray-400 hover:text-white transition-colors">Tentang</a> <a href="#technical-skills" class="block text-gray-400 hover:text-white transition-colors">Keahlian Teknis</a> <a href="#focus-skills" class="block text-gray-400 hover:text-white transition-colors">Fokus Keahlian</a> <a href="#projects" class="block text-gray-400 hover:text-white transition-colors">Proyek</a> <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Kontak</a> </div> </div> <div> <h4 class="text-lg font-semibold mb-4">Kontak</h4> <div class="space-y-2"> <p class="text-gray-400">yafi.rizky@email.com</p> <p class="text-gray-400">linkedin.com/in/yafirizky</p> <p class="text-gray-400">github.com/yafirizky</p> </div> </div> </div> <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"> <p>© 2024 Yafi Rizky. All rights reserved.</p> </div> </div> </footer> <!-- Popup Skill Detail --> <div id="skillPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"> <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto"> <div class="flex justify-between items-start mb-6"> <h3 id="skillTitle" class="text-2xl font-bold"></h3> <button onclick="closePopup()" class="text-gray-500 hover:text-gray-700"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/> </svg> </button> </div> <div id="skillContent" class="space-y-4"></div> </div> </div> <script> // Mobile Menu Toggle function toggleMobileMenu() { const mobileMenu = document.getElementById('mobileMenu'); mobileMenu.classList.toggle('hidden'); } // Smooth scrolling for navigation links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { // Hide mobile menu after clicking a link if (!this.getAttribute('href').startsWith('#')) { document.getElementById('mobileMenu').classList.add('hidden'); } target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); }); // Show/hide sections based on hash function handleHashChange() { const sections = ['about', 'technical-skills', 'focus-skills', 'projects', 'contact']; const hash = window.location.hash.substring(1); sections.forEach(section => { const element = document.getElementById(section); if (element) { if (section === hash || (hash === '' && section === 'about')) { element.classList.remove('hidden-section'); } else { element.classList.add('hidden-section'); } } }); } // Show skill category function showSkillCategory(category) { // Update active button document.querySelectorAll('#technical-skills .bg-gray-100 button').forEach(btn => { if (btn.textContent.toLowerCase().includes(category)) { btn.classList.add('bg-blue-500', 'text-white'); btn.classList.remove('text-gray-600', 'hover:text-blue-500'); } else { btn.classList.remove('bg-blue-500', 'text-white'); btn.classList.add('text-gray-600', 'hover:text-blue-500'); } }); // Show selected content document.querySelectorAll('.skill-content').forEach(content => { if (content.id === `${category}-content`) { content.classList.remove('hidden'); } else { content.classList.add('hidden'); } }); } // Slider Functionality let currentSlide = 0; const slides = document.querySelectorAll('#skillsSlider > div'); function updateSlider() { const offset = -currentSlide * 100; document.getElementById('skillsSlider').style.transform = `translateX(${offset}%)`; } function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateSlider(); } function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateSlider(); } // Skill Detail Data const skillDetails = { 'data-analysis': { title: 'Data Analysis', items: [ 'Data cleaning dan preprocessing', 'Exploratory Data Analysis (EDA)', 'Statistika deskriptif dan inferensial', 'Analisis tren dan pola data', 'Pengolahan data besar (big data)', 'Optimasi query database' ] }, 'machine-learning': { title: 'Machine Learning', items: [ 'Pembuatan model prediktif', 'Feature engineering', 'Evaluasi model dengan metrik yang tepat', 'Implementasi algoritma supervised/unsupervised learning', 'Hyperparameter tuning', 'Deployment model ke production' ] }, 'data-viz': { title: 'Data Visualization', items: [ 'Visualisasi interaktif dengan Tableau', 'Visualisasi dengan Python (Matplotlib, Seaborn)', 'Desain dashboard yang informatif', 'Storytelling dengan data', 'Visualisasi geospatial', 'Animasi data untuk presentasi' ] }, 'business-intel': { title: 'Business Intelligence', items: [ 'Analisis KPI bisnis', 'Pelaporan otomatis', 'Identifikasi peluang bisnis', 'Rekomendasi strategi berbasis data', 'Market basket analysis', 'Customer lifetime value prediction' ] } }; // Popup Functions function showSkillDetail(skillId) { const skill = skillDetails[skillId]; document.getElementById('skillTitle').textContent = skill.title; const contentContainer = document.getElementById('skillContent'); contentContainer.innerHTML = skill.items.map(item => ` <div class="flex items-start"> <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3"></div> <p class="text-gray-700">${item}</p> </div> `).join(''); document.getElementById('skillPopup').classList.remove('hidden'); document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open } function closePopup() { document.getElementById('skillPopup').classList.add('hidden'); document.body.style.overflow = ''; // Re-enable scrolling } // Close popup when clicking outside document.getElementById('skillPopup').addEventListener('click', function(e) { if (e.target === this) { closePopup(); } }); // Initialize document.addEventListener('DOMContentLoaded', () => { handleHashChange(); // Set default views showSkillCategory('software'); updateSlider(); }); // Handle hash changes window.addEventListener('hashchange', handleHashChange); 
+</script>
+</body>
+</html> ```
