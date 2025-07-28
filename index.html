@@ -225,26 +225,50 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4">Projects</h2>
-        <p class="text-xl text-gray-600">Kumpulan proyek data science yang telah saya kerjakan</p>
+ <!-- Projects Section -->
+<section id="projects" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <!-- Header dan toggle view -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Projects</h2>
+      <p class="text-xl text-gray-600">Kumpulan proyek data science yang telah saya kerjakan</p>
+    </div>
+    
+    <!-- View Toggle -->
+    <div class="flex justify-center mb-8">
+      <div class="bg-gray-100 p-1 rounded-lg flex">
+        <button onclick="switchView('grid')" id="gridBtn" class="px-6 py-2 rounded-md bg-primary text-white">
+          Grid View
+        </button>
+        <button onclick="switchView('list')" id="listBtn" class="px-6 py-2 rounded-md text-gray-600">
+          List View
+        </button>
       </div>
-      
-      <!-- View Toggle -->
-      <div class="flex justify-center mb-8">
-        <div class="bg-gray-100 p-1 rounded-lg flex">
-          <button onclick="switchView('grid')" id="gridBtn" class="px-6 py-2 rounded-md bg-primary text-white transition-colors">
-            Grid View
-          </button>
-          <button onclick="switchView('list')" id="listBtn" class="px-6 py-2 rounded-md text-gray-600 hover:text-primary transition-colors">
-            List View
-          </button>
+    </div>
+
+    <!-- Grid View -->
+    <div id="gridView">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="gridContainer">
+        <!-- Projects akan diisi oleh JavaScript -->
+      </div>
+    </div>
+
+    <!-- List View -->
+    <div id="listView" class="hidden">
+      <div class="space-y-6" id="listContainer">
+        <!-- Projects akan diisi oleh JavaScript -->
+      </div>
+      <!-- Pagination -->
+      <div class="mt-8 flex justify-center">
+        <div class="flex items-center space-x-2" id="pagination">
+          <!-- Pagination akan diisi oleh JavaScript -->
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<script src="projects.js"></script>
       <!-- Grid View -->
       <div id="gridView" class="relative">
         <!-- Navigation Arrows -->
