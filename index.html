@@ -18,12 +18,35 @@
             background: white;
             border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .journey-card:hover::before {
+            opacity: 0.05;
         }
 
         .journey-card:hover {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .journey-content {
+            position: relative;
+            z-index: 1;
         }
 
         .gradient-secondary {
@@ -373,66 +396,67 @@
             </div>
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="slide-in-left">
-                    <div class="relative">
-                        <div class="journey-card relative bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="journey-card relative p-8 rounded-2xl shadow-lg">
+                        <div class="journey-content">
                             <h3 class="text-3xl font-bold mb-6 text-gray-800">My Journey</h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">As a dedicated data scientist with over 3 years of experience...</p>
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 gradient-primary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-trophy text-white"></i>
+                            <p class="text-gray-600 mb-6 leading-relaxed">As a dedicated data scientist with over 3 years of experience, I specialize in extracting meaningful insights from complex datasets. My passion lies in bridging the gap between raw data and strategic business decisions.</p>
+                            <div class="space-y-6">
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                        <i class="fas fa-trophy text-blue-600 group-hover:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">3+ Years Experience</h4>
+                                        <p class="text-gray-600">In data analysis and machine learning</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800"> 3+ Years Experience </h4>
-                                    <p class="text-gray-600"> In data analysis and machine learning </p>
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                        <i class="fas fa-code text-purple-600 group-hover:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 group-hover:text-purple-600 transition-colors">Multi-language Expertise</h4>
+                                        <p class="text-gray-600">Python, R, SQL, and JavaScript</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 gradient-secondary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-code text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800"> Multi-language Expertise </h4>
-                                    <p class="text-gray-600"> Python, R, SQL, and JavaScript </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 gradient-tertiary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-brain text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800"> Advanced ML Skills </h4>
-                                    <p class="text-gray-600"> Deep learning and predictive modeling </p>
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                        <i class="fas fa-brain text-indigo-600 group-hover:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">Advanced ML Skills</h4>
+                                        <p class="text-gray-600">Deep learning and predictive modeling</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="slide-in-right">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                        <div class="text-4xl mb-4">📊</div>
-                        <h4 class="font-bold mb-2">Data Analysis</h4>
-                        <p class="text-gray-600 text-sm"> Statistical analysis & EDA </p>
-                    </div>
-                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                        <div class="text-4xl mb-4">🤖</div>
-                        <h4 class="font-bold mb-2">Machine Learning</h4>
-                        <p class="text-gray-600 text-sm"> Predictive modeling </p>
-                    </div>
-                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                        <div class="text-4xl mb-4">📈</div>
-                        <h4 class="font-bold mb-2"> Data Visualization </h4>
-                        <p class="text-gray-600 text-sm"> Interactive dashboards </p>
-                    </div>
-                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                        <div class="text-4xl mb-4">💡</div>
-                        <h4 class="font-bold mb-2"> Business Intelligence </h4>
-                        <p class="text-gray-600 text-sm"> Strategic insights </p>
+                <div class="slide-in-right">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                            <div class="text-4xl mb-4">📊</div>
+                            <h4 class="font-bold mb-2">Data Analysis</h4>
+                            <p class="text-gray-600 text-sm"> Statistical analysis & EDA </p>
+                        </div>
+                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                            <div class="text-4xl mb-4">🤖</div>
+                            <h4 class="font-bold mb-2">Machine Learning</h4>
+                            <p class="text-gray-600 text-sm"> Predictive modeling </p>
+                        </div>
+                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                            <div class="text-4xl mb-4">📈</div>
+                            <h4 class="font-bold mb-2"> Data Visualization </h4>
+                            <p class="text-gray-600 text-sm"> Interactive dashboards </p>
+                        </div>
+                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                            <div class="text-4xl mb-4">💡</div>
+                            <h4 class="font-bold mb-2"> Business Intelligence </h4>
+                            <p class="text-gray-600 text-sm"> Strategic insights </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- Skills Section -->
