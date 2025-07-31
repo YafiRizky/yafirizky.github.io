@@ -14,8 +14,16 @@
             font-family: "Inter", sans-serif;
         }
 
-        .gradient-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .journey-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .journey-card:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
         }
 
         .gradient-secondary {
@@ -366,67 +374,65 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="slide-in-left">
                     <div class="relative">
-                        <div class="absolute -inset-4 gradient-primary rounded-2xl blur opacity-75"></div>
-                        <div class="relative bg-white p-8 rounded-2xl shadow-xl">
-                            <h3 class="text-3xl font-bold mb-6 text-gray-800"> My Journey </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed"> As a dedicated data scientist with over 3 years of experience, I specialize in extracting meaningful insights from complex datasets. My passion lies in bridging the gap between raw data and strategic business decisions. </p>
-                            <div class="space-y-6">
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 gradient-primary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-trophy text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800"> 3+ Years Experience </h4>
-                                        <p class="text-gray-600"> In data analysis and machine learning </p>
-                                    </div>
+                        <div class="journey-card relative bg-white p-8 rounded-2xl shadow-lg">
+                            <h3 class="text-3xl font-bold mb-6 text-gray-800">My Journey</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">As a dedicated data scientist with over 3 years of experience...</p>
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 gradient-primary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-white"></i>
                                 </div>
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 gradient-secondary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-code text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800"> Multi-language Expertise </h4>
-                                        <p class="text-gray-600"> Python, R, SQL, and JavaScript </p>
-                                    </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800"> 3+ Years Experience </h4>
+                                    <p class="text-gray-600"> In data analysis and machine learning </p>
                                 </div>
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 gradient-tertiary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-brain text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800"> Advanced ML Skills </h4>
-                                        <p class="text-gray-600"> Deep learning and predictive modeling </p>
-                                    </div>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 gradient-secondary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-code text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800"> Multi-language Expertise </h4>
+                                    <p class="text-gray-600"> Python, R, SQL, and JavaScript </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 gradient-tertiary rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-brain text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800"> Advanced ML Skills </h4>
+                                    <p class="text-gray-600"> Deep learning and predictive modeling </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide-in-right">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                            <div class="text-4xl mb-4">📊</div>
-                            <h4 class="font-bold mb-2">Data Analysis</h4>
-                            <p class="text-gray-600 text-sm"> Statistical analysis & EDA </p>
-                        </div>
-                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                            <div class="text-4xl mb-4">🤖</div>
-                            <h4 class="font-bold mb-2">Machine Learning</h4>
-                            <p class="text-gray-600 text-sm"> Predictive modeling </p>
-                        </div>
-                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                            <div class="text-4xl mb-4">📈</div>
-                            <h4 class="font-bold mb-2"> Data Visualization </h4>
-                            <p class="text-gray-600 text-sm"> Interactive dashboards </p>
-                        </div>
-                        <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
-                            <div class="text-4xl mb-4">💡</div>
-                            <h4 class="font-bold mb-2"> Business Intelligence </h4>
-                            <p class="text-gray-600 text-sm"> Strategic insights </p>
-                        </div>
+            </div>
+            <div class="slide-in-right">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h4 class="font-bold mb-2">Data Analysis</h4>
+                        <p class="text-gray-600 text-sm"> Statistical analysis & EDA </p>
+                    </div>
+                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h4 class="font-bold mb-2">Machine Learning</h4>
+                        <p class="text-gray-600 text-sm"> Predictive modeling </p>
+                    </div>
+                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                        <div class="text-4xl mb-4">📈</div>
+                        <h4 class="font-bold mb-2"> Data Visualization </h4>
+                        <p class="text-gray-600 text-sm"> Interactive dashboards </p>
+                    </div>
+                    <div class="skill-card p-6 rounded-2xl shadow-lg text-center hover-lift">
+                        <div class="text-4xl mb-4">💡</div>
+                        <h4 class="font-bold mb-2"> Business Intelligence </h4>
+                        <p class="text-gray-600 text-sm"> Strategic insights </p>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- Skills Section -->
@@ -1005,86 +1011,86 @@
             });
             // Show selected content
             document.querySelectorAll('.skill-content').forEach(content => {
-                    const contentId = content.id.toLowerCase();
-                    const categoryId = category.toLowerCase();
-                    if (contentId.includes(categoryId) || (category === 'ml' && contentId.includes('machine learning'))) {
-                            content.classList.remove('hidden');
-                        } else {
-                            content.classList.add('hidden');
-                        }
-                    });
+                const contentId = content.id.toLowerCase();
+                const categoryId = category.toLowerCase();
+                if (contentId.includes(categoryId) || (category === 'ml' && contentId.includes('machine learning'))) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+        }
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const successAnimation = document.getElementById('success-animation');
+            // Cek apakah ada parameter success di URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const isSuccess = urlParams.get('success');
+            if (isSuccess) {
+                successAnimation.classList.remove('hidden');
+                // Hapus parameter success dari URL setelah animasi ditampilkan
+                setTimeout(() => {
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                    successAnimation.classList.add('hidden');
+                }, 3000); // Sembunyikan animasi setelah 3 detik
             }
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fade-in');
-                    }
-                });
-            }, observerOptions);
-            // Observe elements for animation
-            document.addEventListener('DOMContentLoaded', function() {
-                const form = document.getElementById('contact-form');
-                const successAnimation = document.getElementById('success-animation');
-                // Cek apakah ada parameter success di URL
-                const urlParams = new URLSearchParams(window.location.search);
-                const isSuccess = urlParams.get('success');
-                if (isSuccess) {
-                    successAnimation.classList.remove('hidden');
-                    // Hapus parameter success dari URL setelah animasi ditampilkan
+            // Tambahkan event listener untuk submit form
+            form.addEventListener('submit', function() {
+                // Tambahkan parameter success ke URL redirect Formspree
+                const redirectUrl = this.action + "?success=true";
+                this.action = redirectUrl;
+            });
+        });
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+        // Typing animation restart on scroll
+        let typingAnimationPlayed = false;
+        window.addEventListener('scroll', () => {
+            const hero = document.getElementById('home');
+            const heroRect = hero.getBoundingClientRect();
+            if (heroRect.top < window.innerHeight && heroRect.bottom > 0 && !typingAnimationPlayed) {
+                const typewriter = document.querySelector('.typewriter');
+                if (typewriter) {
+                    typewriter.style.animation = 'none';
                     setTimeout(() => {
-                        window.history.replaceState({}, document.title, window.location.pathname);
-                        successAnimation.classList.add('hidden');
-                    }, 3000); // Sembunyikan animasi setelah 3 detik
+                        typewriter.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+                    }, 10);
+                    typingAnimationPlayed = true;
                 }
-                // Tambahkan event listener untuk submit form
-                form.addEventListener('submit', function() {
-                    // Tambahkan parameter success ke URL redirect Formspree
-                    const redirectUrl = this.action + "?success=true";
-                    this.action = redirectUrl;
-                });
-            });
-            // Active navigation highlighting
-            window.addEventListener('scroll', () => {
-                const sections = document.querySelectorAll('section[id]');
-                const navLinks = document.querySelectorAll('.nav-link');
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (window.scrollY >= sectionTop - 200) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove('text-blue-600');
-                    link.classList.add('text-gray-700');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.remove('text-gray-700');
-                        link.classList.add('text-blue-600');
-                    }
-                });
-            });
-            // Typing animation restart on scroll
-            let typingAnimationPlayed = false;
-            window.addEventListener('scroll', () => {
-                const hero = document.getElementById('home');
-                const heroRect = hero.getBoundingClientRect();
-                if (heroRect.top < window.innerHeight && heroRect.bottom > 0 && !typingAnimationPlayed) {
-                    const typewriter = document.querySelector('.typewriter');
-                    if (typewriter) {
-                        typewriter.style.animation = 'none';
-                        setTimeout(() => {
-                            typewriter.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
-                        }, 10);
-                        typingAnimationPlayed = true;
-                    }
-                }
-            });
+            }
+        });
     </script>
 </body>
 
